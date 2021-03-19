@@ -1,0 +1,156 @@
+:root {
+  /****************
+  COLORS 
+  *****************/
+  --light-green: hsl(157 74% 62%);
+  --super-light-green: hsl(157 100% 85%);
+  --dark-blue: hsl(225 26% 23%);
+  --mid-blue: hsl(225 21% 45%);
+  --light-blue: hsl(225 40% 83%);
+  --white: hsl(0 0% 100%);
+  --white-half-opacity: hsl(0 0% 100% / 0.5);
+  --black: hsl(224 35% 11%);
+  --red: hsl(0 96% 61%);
+  /****************
+  TYPOGRAPHY 
+  *****************/
+  --font-family: "Chivo", sans-serif;
+  --light-font-weight: 300;
+  --bold-font-weight: 700;
+
+  /****************
+  ELEMENT SPECIFIC COLORS 
+  *****************/
+  --body-background-color: var(--black);
+  --body-font-color: var(--white);
+  --form-input-background-color: var(--dark-blue);
+  --form-input-font-color: var(--white);
+  --placeholder-color: var(--white-half-opacity);
+  --button-background-color-nohover: var(--light-green);
+  --button-background-color-hover: var(--super-light-green);
+
+  /* ELEMENT SPECIFIC TYPOGRAPHY */
+  --body-content-line-height: 28px;
+  --body-content-font-size: 18px;
+
+  --heading-line-height: 62px;
+  --heading-font-size: 52px;
+  --heading-font-color: var(--light-green);
+  --heading-span-color: var(--white);
+
+  --form-input-font-size: 14px;
+  --form-input-font-weight: var(--bold-font-weight);
+
+  --error-message-font-size: 12px;
+  --error-message-font-color: var(--red);
+
+  /* FORM ELEMENT PADDING */
+  --form-input-padding-inline: 32px;
+  --form-input-padding-block: 14px;
+  --button-padding-inline: 27px;
+  --button-padding-block: 9px;
+
+  /* MISC */
+  --border-radius: 50px;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-font-color);
+  font-family: var(--font-family);
+  font-weight: var(--light-font-weight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--heading-font-size);
+  color: var(--heading-font-color);
+  line-height: var(--heading-line-height);
+  text-transform: uppercase;
+  font-weight: inherit;
+}
+
+span {
+  color: var(--heading-span-color);
+}
+
+p {
+  font-size: var(--body-content-font-size);
+  line-height: var(--body-content-line-height);
+}
+
+input,
+button {
+  border-radius: var(--border-radius);
+  font-weight: var(--form-input-font-weight);
+  outline: none;
+  border: none;
+  font-size: var(--form-input-font-size);
+  line-height: var(--body-content-line-height);
+}
+
+input {
+  background-color: var(--form-input-background-color);
+  color: var(--form-input-font-color);
+  padding: var(--form-input-padding-block) var(--form-input-padding-inline);
+}
+
+button {
+  background-color: var(--button-background-color-nohover);
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  transition: background-color 0.1s ease-in-out;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: var(--button-background-color-hover);
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul > * + * {
+  margin-left: 2rem;
+}
+
+main {
+  background-color: var(--body-background-color);
+}
+
+/* PSEUDO ELEMENTS */
+::placeholder {
+  color: var(--placeholder-color);
+}
+
+/* Utility Classes */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form__error-message {
+  color: var(--error-message-font-color);
+  font-size: var(--error-message-font-size);
+  font-weight: var(--form-input-font-weight);
+  margin: 0 0;
+  padding-left: var(--form-input-padding-inline);
+}
