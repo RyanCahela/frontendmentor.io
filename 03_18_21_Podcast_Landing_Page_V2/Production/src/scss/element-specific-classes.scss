@@ -1,0 +1,18 @@
+/* Element Specific Classes */
+.form__error-message {
+  color: var(--error-message-font-color);
+  font-size: var(--error-message-font-size);
+  font-weight: var(--form-input-font-weight);
+  margin: 0 0;
+  padding-left: var(--form-input-padding-inline);
+  align-self: flex-start;
+}
+
+.form-email-input {
+  display: flex;
+  flex-direction: column;
+  order: 999;
+}
+
+
+

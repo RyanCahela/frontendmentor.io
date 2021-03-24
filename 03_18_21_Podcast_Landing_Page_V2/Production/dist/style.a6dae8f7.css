@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   /****************
   COLORS 
@@ -9,20 +5,18 @@
   --light-green: hsl(157 74% 62%);
   --super-light-green: hsl(157 100% 85%);
   --dark-blue: hsl(225 26% 23%);
-  --mid-blue: hsl(225 21% 45%);
+  --medium-blue: hsl(225 21% 45%);
   --light-blue: hsl(225 40% 83%);
   --white: hsl(0 0% 100%);
   --white-half-opacity: hsl(0 0% 100% / 0.5);
   --black: hsl(224 35% 11%);
   --red: hsl(0 96% 61%);
-
   /****************
   TYPOGRAPHY 
   *****************/
   --font-family: "Chivo", sans-serif;
   --light-font-weight: 300;
   --bold-font-weight: 700;
-
   /****************
   ELEMENT SPECIFIC COLORS 
   *****************/
@@ -33,60 +27,78 @@
   --placeholder-color: var(--white-half-opacity);
   --button-background-color-nohover: var(--light-green);
   --button-background-color-hover: var(--super-light-green);
-
   /* ELEMENT SPECIFIC TYPOGRAPHY */
   --body-content-line-height: 28px;
   --body-content-font-size: 18px;
-
   --mobile-heading-line-height: 38px;
   --mobile-heading-font-size: 24px;
   --mobile-body-line-height: 25px;
   --mobile-body-font-size: 15px;
   --mobile-body-font-weight: var(--light-font-weight);
-
   --desktop-heading-line-height: 62px;
   --desktop-heading-font-size: 52px;
-
   --heading-font-color: var(--light-green);
   --heading-span-color: var(--white);
-
   --form-input-font-size: 14px;
   --form-input-font-weight: var(--bold-font-weight);
-
   --error-message-font-size: 12px;
   --error-message-font-color: var(--red);
-
   /* FORM ELEMENT PADDING */
   --form-input-padding-inline: 32px;
   --form-input-padding-block: 14px;
   --button-padding-inline: 27px;
   --button-padding-block: 9px;
-
   /* MISC */
   --border-radius: 50px;
-  --container-inline-padding: 30px;
+  --container-inline-padding: 1.5rem;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--body-background-color);
-  background-image: url("./assets/mobile/image-host.jpg");
+  background-image: url("/image-host.cf67a10a.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   color: var(--body-font-color);
   font-family: var(--font-family);
   font-weight: var(--mobile-body-font-weight);
+  height: 100%;
   overflow: hidden;
   z-index: -999;
 }
 
 body::before {
   content: "";
-  position: absolute;
-  background-color: hsl(0 0% 0% / 0.9);
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: -100;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+button {
+  background-color: var(--button-background-color-nohover);
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  transition: background-color 0.1s ease-in-out;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: var(--button-background-color-hover);
+  cursor: pointer;
 }
 
 h1,
@@ -123,7 +135,6 @@ button {
   border: none;
   font-size: var(--form-input-font-size);
   line-height: var(--body-content-line-height);
-  width: 100%;
 }
 
 input {
@@ -132,22 +143,17 @@ input {
   padding: var(--form-input-padding-block) var(--form-input-padding-inline);
 }
 
-button {
-  background-color: var(--button-background-color-nohover);
-  padding: var(--button-padding-block) var(--button-padding-inline);
-  transition: background-color 0.1s ease-in-out;
-}
-
-button:hover,
-button:active,
-button:focus {
-  background-color: var(--button-background-color-hover);
-  cursor: pointer;
-}
-
 ul {
   padding-left: 0;
   list-style: none;
+}
+
+li {
+  width: 100%;
+}
+
+img {
+  width: 100%;
 }
 
 header {
@@ -171,17 +177,82 @@ main:first-child {
   color: var(--placeholder-color);
 }
 
-/* Utility Classes */
-.container {
+/* Layout Recipies */
+.center {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
   padding-left: var(--container-inline-padding);
   padding-right: var(--container-inline-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
 }
 
+.cluster {
+  --gap: 1rem;
+  /*supress scrolling due to negative margin sometimes */
+  overflow: hidden;
+}
+
+.cluster > * {
+  /*Negative margin to pull child elements back to edge of parent.*/
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--gap) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--gap) / 2);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}
+
+/* Utility Classes */
+.flex-direction\:row {
+  flex-direction: row;
+}
+
+.flex-wrap\:nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-flow\:row_wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-flow\:column_nowrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flex-flow\:column_wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.width\:100\% {
+  width: 100%;
+}
+
+.margin-top\:2rem {
+  margin-top: 2rem !important;
+}
+
+.margin-top\:3rem {
+  margin-top: 3rem !important;
+}
+
+/* hides from viewport but not screen readers */
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -193,25 +264,9 @@ main:first-child {
   width: 1px;
 }
 
-.flex {
+.display\:flex {
   display: flex;
   justify-content: flex-start;
-}
-
-.flex img {
-  width: 100%;
-}
-
-.flex > li + li {
-  margin-left: 1rem;
-}
-
-.form__error-message {
-  color: var(--error-message-font-color);
-  font-size: var(--error-message-font-size);
-  font-weight: var(--form-input-font-weight);
-  margin: 0 0;
-  padding-left: var(--form-input-padding-inline);
 }
 
 @media only screen and (min-width: 678px) {
@@ -219,3 +274,20 @@ main:first-child {
     background-color: var(--body-background-color);
   }
 }
+/* Element Specific Classes */
+.form__error-message {
+  color: var(--error-message-font-color);
+  font-size: var(--error-message-font-size);
+  font-weight: var(--form-input-font-weight);
+  margin: 0 0;
+  padding-left: var(--form-input-padding-inline);
+  align-self: flex-start;
+}
+
+.form-email-input {
+  display: flex;
+  flex-direction: column;
+  order: 999;
+}
+
+/*# sourceMappingURL=/style.a6dae8f7.css.map */

@@ -1,0 +1,64 @@
+:root {
+  /****************
+  COLORS 
+  *****************/
+  --light-green: hsl(157 74% 62%);
+  --super-light-green: hsl(157 100% 85%);
+  --dark-blue: hsl(225 26% 23%);
+  --medium-blue: hsl(225 21% 45%);
+  --light-blue: hsl(225 40% 83%);
+  --white: hsl(0 0% 100%);
+  --white-half-opacity: hsl(0 0% 100% / 0.5);
+  --black: hsl(224 35% 11%);
+  --red: hsl(0 96% 61%);
+
+  /****************
+  TYPOGRAPHY 
+  *****************/
+  --font-family: "Chivo", sans-serif;
+  --light-font-weight: 300;
+  --bold-font-weight: 700;
+
+  /****************
+  ELEMENT SPECIFIC COLORS 
+  *****************/
+  --body-background-color: var(--black);
+  --body-font-color: var(--light-blue);
+  --form-input-background-color: var(--dark-blue);
+  --form-input-font-color: var(--white);
+  --placeholder-color: var(--white-half-opacity);
+  --button-background-color-nohover: var(--light-green);
+  --button-background-color-hover: var(--super-light-green);
+
+  /* ELEMENT SPECIFIC TYPOGRAPHY */
+  --body-content-line-height: 28px;
+  --body-content-font-size: 18px;
+
+  --mobile-heading-line-height: 38px;
+  --mobile-heading-font-size: 24px;
+  --mobile-body-line-height: 25px;
+  --mobile-body-font-size: 15px;
+  --mobile-body-font-weight: var(--light-font-weight);
+
+  --desktop-heading-line-height: 62px;
+  --desktop-heading-font-size: 52px;
+
+  --heading-font-color: var(--light-green);
+  --heading-span-color: var(--white);
+
+  --form-input-font-size: 14px;
+  --form-input-font-weight: var(--bold-font-weight);
+
+  --error-message-font-size: 12px;
+  --error-message-font-color: var(--red);
+
+  /* FORM ELEMENT PADDING */
+  --form-input-padding-inline: 32px;
+  --form-input-padding-block: 14px;
+  --button-padding-inline: 27px;
+  --button-padding-block: 9px;
+
+  /* MISC */
+  --border-radius: 50px;
+  --container-inline-padding: 1.5rem;
+}

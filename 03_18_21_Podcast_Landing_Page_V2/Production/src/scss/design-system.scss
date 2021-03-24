@@ -1,0 +1,125 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-background-color);
+  background-image: url("../assets/mobile/image-host.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: var(--body-font-color);
+  font-family: var(--font-family);
+  font-weight: var(--mobile-body-font-weight);
+  height: 100%;
+  overflow: hidden;
+  z-index: -999;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background-color: hsl(0 0% 0% / 0.9);
+  z-index: -100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+button {
+  background-color: var(--button-background-color-nohover);
+  padding: var(--button-padding-block) var(--button-padding-inline);
+  transition: background-color 0.1s ease-in-out;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: var(--button-background-color-hover);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--mobile-heading-font-size);
+  color: var(--heading-font-color);
+  line-height: var(--mobile-heading-line-height);
+  text-transform: uppercase;
+  font-weight: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+span {
+  color: var(--heading-span-color);
+}
+
+p {
+  font-size: var(--mobile-body-font-size);
+  line-height: var(--mobile-body-line-height);
+  font-weight: var(--mobile-body-font-weight);
+  max-width: 45ch;
+}
+
+input,
+button {
+  border-radius: var(--border-radius);
+  font-weight: var(--form-input-font-weight);
+  outline: none;
+  border: none;
+  font-size: var(--form-input-font-size);
+  line-height: var(--body-content-line-height);
+}
+
+input {
+  background-color: var(--form-input-background-color);
+  color: var(--form-input-font-color);
+  padding: var(--form-input-padding-block) var(--form-input-padding-inline);
+}
+
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  margin-top: 62px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  margin-top: 57px;
+}
+
+main:first-child {
+  margin-bottom: 57px;
+}
+
+
+/* PSEUDO ELEMENTS */
+::placeholder {
+  color: var(--placeholder-color);
+}
