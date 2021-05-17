@@ -1,0 +1,90 @@
+:root {
+  /* Colors */
+  /* Pimary Colors */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --transparent-white-75: hsla(0, 0%, 100%, 0.75);
+  --transparent-white-60: hsla(0, 0%, 100%, 0.6);
+
+  /* Typogrophy */
+  /* Body Copy */
+  --font-size: 15px;
+
+  /* Font Weights */
+  --inter-normal-weight: 400;
+  --inter-bold-weight: 700;
+  --lexend-normal-weight: 400;
+
+  /* Font Family */
+  --inter-font-family: "Inter", sans-serif;
+  --lexend-font-family: "Lexend Deca", sans-serif;
+
+  /* Theme Variables */
+  --background-color: var(--very-dark-blue);
+  --card-background: var(--dark-desaturated-blue);
+  --accent-color: var(--soft-violet);
+  --main-paragraph-font-color: var(--transparent-white-75);
+  --stat-heading-font-color: var(--transparent-white-60);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--background-color);
+  color: var(--main-paragraph-font-color);
+  text-align: center;
+}
+
+h1 {
+  font-weight: var(--inter-bold-weight);
+}
+
+p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 1.5rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.card {
+  background-color: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 60ch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: var(--inter-font-family);
+  font-weight: var(--inter-normal-weight);
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.highlight-text {
+  color: var(--accent-color);
+}
+
+.statistic-number {
+  font-weight: var(--inter-bold-weight);
+}
+
+.statistic-label {
+  font-weight: var(--inter-normal-weight);
+}
