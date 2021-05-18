@@ -19,6 +19,11 @@
   --heading-line-height: 32px;
   --statistic-label-font-size: 12px;
   --statistic-number-font-size: 24px;
+  --statistic-margin-amount: 2rem;
+
+  /* Desktop Font Sizes */
+  --desktop-heading-font-size: 36px;
+  --desktop-heading-line-height: 44px;
 
   /* Font Weights */
   --inter-normal-weight: 400;
@@ -48,7 +53,6 @@ body {
   background-color: var(--background-color);
   margin-left: 0;
   margin-right: 0;
-  text-align: center;
 }
 
 h1 {
@@ -62,9 +66,6 @@ p {
   color: var(--main-paragraph-font-color);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
-  padding-left: 1rem;
-  padding-right: 1rem;
-
   max-width: 60ch;
 }
 
@@ -74,24 +75,23 @@ ul {
 }
 
 li + li {
-  margin-top: 2rem;
+  margin-top: var(--statistic-margin-amount);
 }
 
 .card {
   background-color: var(--card-background);
   display: flex;
   flex-direction: column;
-  align-items: center;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .card-copy {
   padding: 1.75rem;
+  text-align: center;
 }
 
 .container {
-  max-width: 60ch;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 1rem;
@@ -102,7 +102,9 @@ li + li {
 
 .hero-image-container {
   position: relative;
-  overflow: hidden;
+  min-height: 240px;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-size: cover;
 }
 
 .hero-image-container:before {
@@ -111,11 +113,6 @@ li + li {
   height: 100%;
   width: 100%;
   background-color: var(--transparent-soft-violet);
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
 }
 
 .highlight-text {
@@ -135,4 +132,53 @@ li + li {
   font-weight: var(--inter-normal-weight);
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: var(--desktop-heading-font-size);
+    line-height: var(--desktop-heading-line-height);
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 72px;
+  }
+
+  .card {
+    flex-direction: row;
+    max-width: 1110px;
+    justify-content: space-between;
+  }
+
+  .card-copy {
+    padding-bottom: 59px;
+    padding-top: 72px;
+    padding-left: 72px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .hero-image-container {
+    order: 10;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    width: 50%;
+  }
+
+  .statistics {
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  li + li {
+    margin-top: 0;
+    margin-left: 60px;
+  }
 }
