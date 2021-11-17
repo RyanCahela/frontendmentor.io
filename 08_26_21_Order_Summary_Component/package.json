@@ -1,0 +1,26 @@
+{
+  "name": "08_26_21_order_summary_component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /08_26_21_Order_Summary_Component"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanCahela/08_26_21_Order_Summary_Component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanCahela/08_26_21_Order_Summary_Component/issues"
+  },
+  "homepage": "https://github.com/RyanCahela/08_26_21_Order_Summary_Component#readme",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.38.1"
+  }
+}

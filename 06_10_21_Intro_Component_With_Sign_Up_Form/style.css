@@ -1,0 +1,325 @@
+:root {
+  /** COLORS **/
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --dark-green: hsl(154, 59%, 45%);
+  --light-green: hsl(154, 65%, 68%);
+  --blue: hsl(248, 32%, 49%);
+  --white: #ffffff;
+
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grey: #dedede;
+  --greyish-blue: hsl(246, 25%, 77%);
+
+  /** TYPOGRAPHY **/
+  --font-family: "Poppins", sans-serif;
+
+  /* Font Size */
+  --body-font-size: 16px;
+  --heading-font-size: 28px;
+  --form-placeholder-font-size: 14px;
+  --form-terms-conditions-font-size: 11px;
+  --form-error-message-font-size: 11px;
+  --form-submit-font-size: 15px;
+  --desktop-heading-font-size: 50px;
+
+  /* Font Weight */
+  --normal-font-weight: 500;
+  --simibold-font-weight: 600;
+  --bold-font-weight: 700;
+
+  /* Line Height */
+  --default-line-height: 26px;
+  --heading-line-height: 36px;
+  --form-terms-conditions-line-height: 21px;
+  --desktop-heading-line-height: 55px;
+
+  /* Letter Spacing */
+  --form-placeholder-letter-spacing: 0.25px;
+  --heading-letter-spacing: -0.29px;
+  --desktop-heading-letter-spacing: -0.52px;
+
+  /** LAYOUT **/
+  --mobile-width-min: 280px;
+  --mobile-width-max: 375px;
+  --desktop-width-max: 1110px;
+  --desktop-width-min: 800px;
+
+  /** THEME **/
+  /* Theme Colors */
+  --body-background-color: var(--red);
+  --banner-background-color: var(--blue);
+  --form-background-color: var(--white);
+  --form-button-background-color: var(--green);
+  --form-button-background-color-active: var(--light-green);
+  --form-button-bottom-border-color: var(--dark-green);
+  --form-caret-color: var(--blue);
+  --font-color-light: var(--white);
+  --font-color-dark: var(--dark-blue);
+  --form-input-active-border-color: var(--blue);
+  --form-input-border-color: var(--grey);
+  --terms-and-service-font-color: var(--greyish-blue);
+  --terms-and-service-link-color: var(--red);
+  --error-color: var(--red);
+
+  /* Theme Typography */
+  --heading-font-weight: var(--bold-font-weight);
+  --banner-span-font-weight: var(--bold-font-weight);
+
+  /* Theme Layout */
+  --desktop-form-padding: 40px;
+  --form-element-padding-top: 15px;
+  --form-element-padding-bottom: 15px;
+  --form-element-border-radius: 5px;
+  --form-element-stack-margin-top: 16px;
+  --form-card-border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: url("./images/bg-intro-mobile.png");
+  background-color: var(--body-background-color);
+  background-attachment: fixed;
+  color: var(--font-color-light);
+  line-height: var(--default-line-height);
+}
+
+h1 {
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height);
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 68px;
+  max-width: var(--mobile-width-max);
+  min-width: var(--mobile-width-min);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ad-copy {
+  margin-top: 88px;
+  text-align: center;
+}
+
+.ad-copy p {
+  margin-top: 16px;
+}
+
+.sign-up-form-section {
+  margin-top: 64px;
+}
+
+.banner {
+  background-color: var(--banner-background-color);
+  border-radius: var(--form-card-border-radius);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 67px;
+  padding-right: 66px;
+  text-align: center;
+}
+
+.sign-up-form {
+  background-color: var(--form-background-color);
+  border-radius: var(--form-card-border-radius);
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.sign-up-form .form-input-container {
+  position: relative; /*creates positioning context for error-icon*/
+}
+
+.sign-up-form .form-input-container .form-input {
+  outline: none;
+  border-radius: var(--form-element-border-radius);
+  border: 1px solid var(--form-input-border-color);
+}
+
+.sign-up-form .form-input-container .form-input:focus-within {
+  border: 1px solid var(--form-input-active-border-color);
+}
+
+.sign-up-form .form-input-container .form-input input {
+  width: 90%;
+  border: none;
+  border-radius: var(--form-element-border-radius);
+  line-height: var(--default-line-height);
+  padding-top: var(--form-element-padding-top);
+  padding-bottom: var(--form-element-padding-bottom);
+  padding-left: 20px;
+  padding-right: 20px;
+  caret-color: var(--form-caret-color);
+  outline: none;
+}
+
+.sign-up-form .error .form-input {
+  border: 2px solid var(--error-color);
+}
+
+.sign-up-form .error .form-input:focus-within {
+  border: 2px solid var(--error-color);
+}
+
+.sign-up-form .form-input-container input {
+  font-weight: var(--simibold-font-weight);
+  letter-spacing: var(--form-placeholder-letter-spacing);
+}
+
+.sign-up-form .form-input-container input::placeholder {
+  font-weight: var(--simibold-font-weight);
+  letter-spacing: var(--form-placeholder-letter-spacing);
+}
+
+/* Hides error messages until .error class is added */
+.sign-up-form .error-message {
+  display: none;
+}
+
+.sign-up-form .error-icon {
+  display: none;
+}
+
+.sign-up-form .error .error-icon {
+  display: inline-block;
+  background-image: url("./images/icon-error.svg");
+  position: absolute;
+  top: 13px;
+  right: 27px;
+  height: 24px;
+  width: 24px;
+}
+
+.sign-up-form .error {
+  color: var(--error-color);
+}
+
+.sign-up-form .error input {
+  border: 2px solid var(--error-color);
+  color: inherit;
+}
+
+.sign-up-form .error .error-message {
+  display: block;
+  font-size: var(--form-error-message-font-size);
+  text-align: right;
+}
+
+/* Creates Stack of input fields */
+.sign-up-form .form-input-container + .form-input-container {
+  margin-top: var(--form-element-stack-margin-top);
+}
+
+.sign-up-form button[type="submit"] {
+  background-color: var(--form-button-background-color);
+  border: none;
+  box-shadow: inset 0 -3px var(--dark-green);
+  border-radius: var(--form-element-border-radius);
+  color: var(--font-color-light);
+  font-weight: var(--simibold-font-weight);
+  letter-spacing: var(--form-placeholder-letter-spacing);
+  line-height: var(--default-line-height);
+  margin-top: var(--form-element-stack-margin-top);
+  padding-top: var(--form-element-padding-top);
+  padding-bottom: var(--form-element-padding-bottom);
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.sign-up-form button[type="submit"]:active {
+  background-color: var(--form-button-background-color-active);
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.terms-and-service-notification {
+  color: var(--terms-and-service-font-color);
+  font-size: var(--form-terms-conditions-font-size);
+  font-weight: var(--normal-font-weight);
+  line-height: var(--form-terms-conditions-line-height);
+  text-align: center;
+  margin-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.terms-and-service-notification a {
+  color: var(--terms-and-service-link-color);
+  font-weight: var(--bold-font-weight);
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.bold-font {
+  font-weight: var(--bold-font-weight);
+}
+
+.error-message {
+  color: var(--error-color);
+}
+
+.error input {
+  border: 2px solid var(--error-color);
+}
+
+.screen-reader-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  h1 {
+    font-size: var(--desktop-heading-font-size);
+    line-height: var(--desktop-heading-line-height);
+    letter-spacing: var(--desktop-heading-letter-spacing);
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--desktop-width-max);
+    min-width: var(--desktop-width-min);
+    align-items: center;
+  }
+
+  .ad-copy {
+    flex-basis: 525px;
+    padding-right: 45px;
+    text-align: left;
+  }
+
+  .sign-up-form-section {
+    flex-basis: 540px;
+  }
+
+  .sign-up-form {
+    flex-basis: 100%;
+    padding: var(--desktop-form-padding);
+  }
+}

@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+order-summary-component-figma/
+order-summary-component-main/
+.cache/

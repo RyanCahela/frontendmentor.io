@@ -1,0 +1,206 @@
+:root {
+  /* Colors */
+  /* Pimary Colors */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --transparent-soft-violet: hsla(277, 100%, 40%, 0.5);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --transparent-white-75: hsla(0, 0%, 100%, 0.75);
+  --transparent-white-60: hsla(0, 0%, 100%, 0.6);
+
+  /* Typogrophy */
+  /* Body Copy */
+  --body-font-size: 15px;
+  --body-line-height: 25px;
+  --heading-font-size: 28px;
+  --heading-line-height: 32px;
+  --statistic-label-font-size: 12px;
+  --statistic-number-font-size: 24px;
+  --statistic-margin-amount: 2rem;
+
+  /* Desktop Font Sizes */
+  --desktop-heading-font-size: 36px;
+  --desktop-heading-line-height: 44px;
+
+  /* Font Weights */
+  --inter-normal-weight: 400;
+  --inter-bold-weight: 700;
+  --lexend-normal-weight: 400;
+
+  /* Font Family */
+  --inter-font-family: "Inter", sans-serif;
+  --lexend-font-family: "Lexend Deca", sans-serif;
+
+  /* Theme Variables */
+  --background-color: var(--very-dark-blue);
+  --card-background: var(--dark-desaturated-blue);
+  --accent-color: var(--soft-violet);
+  --main-paragraph-font-color: var(--transparent-white-75);
+  --heading-font-color: var(--white);
+  --statistic-number-font-color: var(--white);
+  --statistic-label-font-color: var(--transparent-white-60);
+  --stat-heading-font-color: var(--transparent-white-60);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1 {
+  font-weight: var(--inter-bold-weight);
+  color: var(--heading-font-color);
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+}
+
+p {
+  color: var(--main-paragraph-font-color);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  max-width: 60ch;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li + li {
+  margin-top: var(--statistic-margin-amount);
+}
+
+.card {
+  background-color: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-copy {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: var(--inter-font-family);
+  font-weight: var(--inter-normal-weight);
+}
+
+.hero-image-container {
+  position: relative;
+  min-height: 240px;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-size: cover;
+}
+
+.hero-image-container:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--transparent-soft-violet);
+}
+
+.highlight-text {
+  color: var(--accent-color);
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statistic-number {
+  color: var(--statistic-number-font-color);
+  font-weight: var(--inter-bold-weight);
+  font-size: var(--statistic-number-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.statistic-label {
+  color: var(--statistic-label-font-color);
+  font-size: var(--statistic-label-font-size);
+  font-weight: var(--inter-normal-weight);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: var(--desktop-heading-font-size);
+    line-height: var(--desktop-heading-line-height);
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 72px;
+  }
+
+  .card {
+    flex-direction: row;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  .card-copy {
+    align-items: flex-start;
+    padding-bottom: 59px;
+    padding-top: 72px;
+    padding-left: 72px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .hero-image-container {
+    order: 10;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    width: 50%;
+  }
+
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .statistic {
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+
+  li + li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
