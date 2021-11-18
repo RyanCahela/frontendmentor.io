@@ -6,12 +6,24 @@
   background-color: hsl(var(--color-white));
 }
 
+.bg-accent-light-to-accent-primary {
+  background-image: linear-gradient(135, hsl(var(--color-accent-light)), hsl(var(--color-accent-primary)))
+} 
+
 .color-black {
   color: hsl(var(--color-black));
 }
 
 .color-accent-muted {
   color: hsl(var(--color-accent-muted));
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
 }
 
 .ff-sans-serif {
@@ -32,4 +44,24 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+
+/*****************
+Layout
+******************/
+
+.inline-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.block {
+  display: block;
 }

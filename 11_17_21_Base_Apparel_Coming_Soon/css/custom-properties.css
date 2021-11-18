@@ -3,7 +3,7 @@
   Color
   *********************/
   --color-black: 0 7% 24%;
-  --color-white: 0 0% 86%;
+  --color-white: 0 0% 100%;
   --color-accent-light: 0 80% 86%;
   --color-accent-primary: 0 74% 74%;
   --color-accent-muted: 0 36% 70%;
@@ -15,4 +15,7 @@
   Typography
   *********************/
   --ff-sans-serif: 'Josefin Sans', sans-serif;
+
+  --fs-400: 1rem;
+  --fs-900: 4rem;
 }
