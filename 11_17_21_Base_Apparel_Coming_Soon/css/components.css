@@ -3,6 +3,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 200px auto;
   min-height: 100vh;
+  gap: 2rem;
 }
 
 .email-form {
@@ -15,10 +16,15 @@
   width: 150px;
 }
 
-.hero-image {
-  grid-column: 2 / -1;
+.hero-image-container {
+  grid-column: 2;
   grid-row: 1 / -1;
 }
+
+.hero-image {
+  object-fit: cover;
+}
+
 
 .hero-heading {
   font-size: var(--fs-900);
