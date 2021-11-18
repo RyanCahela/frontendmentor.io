@@ -1,0 +1,35 @@
+.bg-color-black {
+  background-color: hsl(var(--color-black));
+}
+
+.bg-color-white {
+  background-color: hsl(var(--color-white));
+}
+
+.color-black {
+  color: hsl(var(--color-black));
+}
+
+.color-accent-muted {
+  color: hsl(var(--color-accent-muted));
+}
+
+.ff-sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
