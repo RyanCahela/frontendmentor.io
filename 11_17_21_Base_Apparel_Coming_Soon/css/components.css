@@ -1,9 +1,10 @@
 .page-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 200px auto;
-  min-height: 100vh;
+  grid-template-rows: 100px auto;
   gap: 2rem;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-size: 50% 100%;
 }
 
 .email-form {
