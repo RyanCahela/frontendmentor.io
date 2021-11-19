@@ -1,16 +1,28 @@
 .page-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 100px auto;
-  gap: 2rem;
+  min-height: 100vh;
   background-image: url("../images/bg-pattern-desktop.svg");
   background-size: 50% 100%;
+  background-repeat: no-repeat;
 }
 
 .email-form {
+}
+
+.email-form__input-border {
   display: grid;
-  grid-template-columns: 4fr 1fr 2fr;
+  grid-template-columns: 4fr 1fr 1fr;
   align-items: start;
+  border: 1px solid hsl(var(--color-accent-muted));
+  border-radius: 1000px;
+}
+
+.email-form__input {
+  height: 100%;
+  border: 0;
+  border-radius: 1000px;
 }
 
 .header-logo-image {
@@ -20,12 +32,21 @@
 .hero-image-container {
   grid-column: 2;
   grid-row: 1 / -1;
+  width: 100%;
 }
 
 .hero-image {
+  display: block;
   object-fit: cover;
 }
 
+.hero-text {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8.5em;
+  gap: 2rem;
+}
 
 .hero-heading {
   font-size: var(--fs-900);
