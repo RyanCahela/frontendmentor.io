@@ -18,6 +18,10 @@
   color: hsl(var(--color-accent-muted));
 }
 
+.color-error {
+  color: hsl(var(--color-error));
+}
+
 .fs-400 {
   font-size: var(--fs-400);
 }
