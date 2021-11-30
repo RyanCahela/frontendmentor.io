@@ -1,0 +1,25 @@
+:root {
+  /***********
+  Color
+  ***********/
+  /* Primary */
+  --fc-primary: hsl(215, 51%, 70%);
+  --fc-accent: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --bg-color-main: hsl(217, 54%, 11%);
+  --bg-color-card: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color-main);
+}
+
