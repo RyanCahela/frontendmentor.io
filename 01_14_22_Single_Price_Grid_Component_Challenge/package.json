@@ -1,0 +1,12 @@
+{
+  "name": "01_14_22_Single_Price_Grid_Component_Challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

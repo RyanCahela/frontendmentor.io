@@ -1,0 +1,51 @@
+:root {
+  --cyan: 179 62% 43%;
+  --bright-yellow: 71 73% 54%;
+  --gray-400: 204 43% 93%;
+  --gray-500: 218 22% 67%;
+  --white: 0 0% 100%;
+
+  --primary-color: hsl(var(--cyan));
+  --accent-color: hsl(var(--bright-yellow));
+
+  --transparent-white: hsl(var(--white) / 0.15);
+
+  --dark-neutral-color: hsl(var(--gray-500));
+  --light-neutral-color: hsl(var(--gray-400));
+}
+
+button {
+  color: inherit;
+}
+
+.light-font-color {
+  color: var(--light-neutral-color);
+}
+
+.dark-font-color {
+  color: var(--dark-neutral-color);
+}
+
+.primary-text-color {
+  color: var(--primary-color);
+}
+
+.accent-text-color {
+  color: var(--accent-color);
+}
+
+.primary-background {
+  background-color: var(--primary-color);
+}
+
+.transparent-white-background {
+  background-color: var(--transparent-white);
+}
+
+.accent-background-color {
+  background-color: var(--accent-color);
+}
+
+.light-background {
+  background-color: var(--light-neutral-colorv);
+}
