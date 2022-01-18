@@ -18,6 +18,10 @@ button {
   color: inherit;
 }
 
+/*********
+Utilites
+**********/
+
 .light-font-color {
   color: var(--light-neutral-color);
 }
@@ -48,4 +52,14 @@ button {
 
 .light-background {
   background-color: var(--light-neutral-colorv);
+}
+
+/*********
+Components
+**********/
+
+.cta,
+.hero,
+.why-us {
+  padding: 2.5rem;
 }
