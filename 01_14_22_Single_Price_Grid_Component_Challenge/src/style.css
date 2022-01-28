@@ -12,6 +12,20 @@
 
   --dark-neutral-color: hsl(var(--gray-500));
   --light-neutral-color: hsl(var(--gray-400));
+
+  /****Fonts****/
+  --font-family: "Karla", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 button {
@@ -54,12 +68,27 @@ Utilites
   background-color: var(--light-neutral-colorv);
 }
 
+/*
+font utilites
+*/
+
+.sans-serif-font {
+  font-family: var(--font-family);
+}
+
 /*********
 Components
 **********/
-
 .cta,
 .hero,
 .why-us {
-  padding: 2.5rem;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 375px) {
+  .cta,
+  .hero,
+  .why-us {
+    padding: 2.5rem;
+  }
 }
