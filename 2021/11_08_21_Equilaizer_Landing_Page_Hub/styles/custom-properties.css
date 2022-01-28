@@ -1,0 +1,59 @@
+/*************************
+Custom Properties
+*************************/
+
+:root {
+  /*************************
+  Colors
+  *************************/
+  --color-ios-accent: 177 68% 64%;
+  --color-equal-accent: 12 94% 65%;
+  --color-android-accent: 33 100% 70%;
+  --color-white: 20 33% 98%;
+  --color-black: 244 23% 12%;
+
+  /*************************
+  Typography
+  *************************/
+  --ff-sans-serif: "IBM Plex Sans", sans-serif;
+  --fw-bold: 700;
+  --fw-regular: 500;
+  --fs-200: 1rem; /* 16px */
+  --fs-300: 1.125rem; /* 18px */
+  --fs-400: 1.25rem; /* 20px */
+  --fs-500: 2rem; /* 32px */
+  --fs-600: 2.5rem; /* 40px */
+  --fs-700: 3rem; /* 48px */
+  --fs-800: 4rem; /* 64px */
+  --fs-900: 5.5rem; /* 88px */
+
+  /* H1 Values */
+  --mobile-h1-line-height: 3rem; /* 48px */
+  --mobile-h1-letter-spacing: -0.45px;
+
+  --tablet-h1-line-height: var(--fs-800);
+  --tablet-h1-letter-spacing: -0.73px;
+
+  --desktop-h1-line-height: var(--fs-900);
+  --desktop-h1-letter-spacing: -1px;
+
+  /* H2 Values */
+  --mobile-h2-line-height: 2.5rem; /* 40px */
+  --desktop-h2-line-height: 3.25rem; /* 52px */
+
+  /* Hero-section__paragraph */
+  --mobile-hero-section__paragarph-line-height: 1.625rem;
+
+  /*************************
+  Layout
+  *************************/
+  --gap-200: 1rem; /* 16px */
+  --gap-300: 1.125rem; /* 18px */
+  --gap-400: 1.25rem; /* 20px */
+  --gap-500: 2rem; /* 32px */
+  --gap-600: 2.5rem; /* 40px */
+  --gap-700: 3rem; /* 48px */
+  --gap-800: 4rem; /* 64px */
+  --gap-900: 5.5rem; /* 88px */
+  --border-radius: 10px;
+}

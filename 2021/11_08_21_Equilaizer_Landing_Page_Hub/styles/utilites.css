@@ -1,0 +1,207 @@
+/*************************
+Utlilites
+*************************/
+
+/*************************
+Colors
+*************************/
+.hover-bg-ios-accent:hover,
+.hover-bg-ios-accent:focus-visible {
+  background-color: hsl(var(--color-ios-accent));
+}
+
+.hover-bg-android-accent:hover,
+.hover-bg-android-accent:focus-visible {
+  background-color: hsl(var(--color-android-accent));
+}
+
+.bg-equal-accent {
+  background-color: hsl(var(--color-equal-accent));
+}
+
+.bg-white {
+  background-color: hsl(var(--color-white));
+}
+
+.bg-black {
+  background-color: hsl(var(--color-black));
+}
+
+.fc-white {
+  color: hsl(var(--color-white));
+}
+
+.fc-black {
+  color: hsl(var(--color-black));
+}
+
+.fc-gray {
+  color: hsl(var(--color-black) / 0.5);
+}
+
+/*************************
+Typography
+*************************/
+.ff-sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-bold);
+}
+
+.h1,
+.h2 {
+  font-weight: var(--fw-bold);
+}
+
+.h1 {
+  font-size: var(--fs-600);
+  line-height: var(--mobile-h1-line-height);
+  letter-spacing: var(--mobile-h1-letter-spacing);
+}
+
+.h2 {
+  font-size: var(--fs-500);
+  line-height: var(--mobile-h2-line-height);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .h1 {
+    font-size: var(--fs-800);
+    line-height: var(--tablet-h1-line-height);
+    letter-spacing: var(--tablet-h1-letter-spacing);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+  .h1 {
+    font-size: var(--fs-900);
+    line-height: var(--desktop-h1-line-height);
+    letter-spacing: var(--desktop-h1-letter-spacing);
+  }
+
+  .h2 {
+    font-size: var(--fs-600);
+    line-height: var(--desktop-h2-line-height);
+  }
+}
+
+/*************************
+Layout
+*************************/
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex-col {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--gap, 1rem);
+}
+
+.gap-200 {
+  --gap: 1rem;
+}
+
+.gap-300 {
+  --gap: 1.125rem;
+}
+
+.gap-400 {
+  --gap: 1.25rem;
+}
+
+.gap-500 {
+  --gap: 2rem;
+}
+
+.gap-600 {
+  --gap: 2.5rem;
+}
+
+.gap-700 {
+  --gap: 3rem;
+}
+
+.gap-800 {
+  --gap: 4rem;
+}
+
+.gap-900 {
+  --gap: 5.5rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.basis-50 {
+  flex-basis: 50%;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.section-container {
+  padding-inline: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .section-container {
+    /*******************
+    section-container is to help with some 
+    components touching the side of the viewport 
+    in mobile view, once in tablet view we can 
+    just turn off and let page-container take over. 
+    *********************/
+    padding-inline: 0;
+  }
+
+  .page-container {
+    padding-inline: 2rem;
+  }
+}
+
+/*************************
+Design System
+*************************/
+.color-swatch {
+  flex-basis: 33%;
+}
+
+.color-swatch div {
+  height: 75px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mr-4\.5 {
+  margin-right: 4.5rem;
+}
+
+.border {
+  border: 1px solid hsl(var(--color-black));
+}
+
+.rounded-corners {
+  border-radius: 12px;
+}

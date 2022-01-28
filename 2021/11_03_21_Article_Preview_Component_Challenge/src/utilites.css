@@ -1,0 +1,114 @@
+/**************************\
+  Utilites
+\**************************/
+
+/**************************\
+  Layout
+\**************************/
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 0);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/**************************\
+  Typography
+\**************************/
+.fc-dark {
+  color: hsl(var(--color-dark));
+}
+
+.fc-medium {
+  color: hsl(var(--color-medium));
+}
+
+.fc-light {
+  color: hsl(var(--color-light));
+}
+
+.fc-very-light {
+  color: hsl(var(--color-very-light));
+}
+
+.fc-white {
+  color: hsl(var(--color-white));
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.ff-sans-serif {
+  font-family: var(--ff-sans-serif);
+}
+
+/**************************\
+  Backgrounds 
+\**************************/
+.bg-dark {
+  background-color: hsl(var(--color-dark));
+}
+
+.bg-medium {
+  background-color: hsl(var(--color-medium));
+}
+
+.bg-light {
+  background-color: hsl(var(--color-light));
+}
+
+.bg-very-light {
+  background-color: hsl(var(--color-very-light));
+}
+
+.bg-white {
+  background-color: hsl(var(--color-white));
+}
+
+.rounded-corners {
+  border-radius: 10px;
+}
+
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+}
