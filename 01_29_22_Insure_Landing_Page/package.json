@@ -1,0 +1,13 @@
+{
+  "name": "01_29_22_Insure_Landing_Page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/styles/index.scss src/style.css --watch",
+    "dev": "live-server src" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
