@@ -1,0 +1,13 @@
+/************************
+Layout
+l_ stands for layout
+*************************/
+.l_qr-card {
+  display: flex;
+  flex-direction: column;
+  height: 497px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  width: 320px;
+}

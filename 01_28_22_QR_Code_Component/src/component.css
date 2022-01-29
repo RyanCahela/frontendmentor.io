@@ -1,0 +1,25 @@
+/************************
+Components
+c_ stands for component
+*************************/
+.c_qr-card {
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
+  background-color: var(--card-background);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.c_qr-card__heading {
+  color: var(--heading-color);
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+}
+
+.c_qr-card__body-text {
+  margin: 0;
+  padding-inline: 1rem;
+  font-weight: 400;
+}

@@ -1,3 +1,30 @@
+:root {
+  /************************
+  Colors
+  *************************/
+  --white: 0 0% 100%;
+  --light-gray: 212 45% 89%;
+  --grayish-blue: 220 15% 55%;
+  --dark-blue: 218 44% 22%;
+
+  /************************
+  Color intentions for theaming
+  *************************/
+  --body-background: hsl(var(--light-gray));
+  --card-background: hsl(var(--white));
+  --heading-color: hsl(var(--dark-blue));
+  --paragraph-color: hsl(var(--grayish-blue));
+
+  /************************
+  Typography
+  *************************/
+  --sans-serif-font: "Outfit", sans-serif;
+  --paragraph-font-size: 15px;
+  --paragraph-line-height: 19px;
+  --heading-font-size: 22px;
+  --heading-line-height: 28px;
+}
+
 *,
 *::before,
 *::after {
@@ -8,4 +35,7 @@ img {
   max-width: 100%;
 }
 
-
+body {
+  margin: 0;
+  height: 100vh;
+}

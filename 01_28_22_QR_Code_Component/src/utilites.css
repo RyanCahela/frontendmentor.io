@@ -1,0 +1,16 @@
+/************************
+Utilites
+*************************/
+.sans-serif {
+  font-family: var(--sans-serif-font);
+}
+
+.body-background {
+  background-color: var(--body-background);
+}
+
+.paragraph-font-styles {
+  font-size: var(--paragraph-font-size);
+  color: var(--paragraph-color);
+  line-height: var(--paragraph-line-height);
+}
