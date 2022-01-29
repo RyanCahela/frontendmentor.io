@@ -2,6 +2,12 @@
 Layout
 l_ stands for layout
 *************************/
+.l_body {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
 .l_qr-card {
   display: flex;
   flex-direction: column;
