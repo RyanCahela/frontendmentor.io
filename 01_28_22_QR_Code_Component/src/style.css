@@ -1,0 +1,56 @@
+:root {
+  /************************
+  Colors
+  *************************/
+  --white: 0 0% 100%;
+  --light-gray: 212 45% 89%;
+  --grayish-blue: 220 15% 55%;
+  --dark-blue: 218 44% 22%;
+
+  /************************
+  Color intentions for theaming
+  *************************/
+  --body-background: hsl(var(--light-gray));
+  --heading-color: hsl(var(--dark-blue));
+  --paragraph-color: hsl(var(--grayish-blue));
+
+  /************************
+  Typography
+  *************************/
+  --sans-serif-font: "Outfit", sans-serif;
+}
+
+/************************
+Utilites
+*************************/
+.sans-serif {
+  font-family: var(--sans-serif-font);
+}
+
+.paragraph-font-color {
+  color: var(--paragraph-color);
+}
+
+/************************
+Layout
+*************************/
+.l_qr-card {
+  width: 320px;
+  height: 497px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/************************
+Components
+c_foobar = component_foobar
+*************************/
+.c_qr-card {
+}
+
+.c_qr-card__heading {
+  color: var(--heading-color);
+}
+
+.c_qr-card__body-text {
+}
