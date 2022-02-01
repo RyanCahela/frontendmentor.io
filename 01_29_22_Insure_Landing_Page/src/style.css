@@ -337,6 +337,23 @@ template {
   display: none;
 }
 
+:root {
+  /**********************
+    Colors as colors
+  ***********************/
+  --black: 271 9% 17%;
+  --white: 0 100% 100%;
+  --gray: 271 5% 51%;
+  --dark-purple: 256 26% 20%;
+  --gray-blue: 215 30% 68%;
+  /**********************
+    Typography
+  ***********************/
+  --light-font-color: hsl(var(--white));
+  --dark-font-color: hsl(var(--black));
+  --icon-color: hsl(var(--gray-blue));
+}
+
 *,
 *::before,
 *::after {
@@ -347,16 +364,75 @@ body {
   margin: 0;
 }
 
-h1 {
-  color: tomato;
-}
-
 img {
   max-width: 100%;
 }
 
 ul[class] {
   padding-left: 0;
+  list-style: none;
+}
+
+/**********************
+  Layout Utilites
+***********************/
+.hidden {
+  display: none;
+}
+
+/**********************
+  Component Layout
+***********************/
+.l_header {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l_header__nav {
+  display: none;
+}
+
+.l_different {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l_different__list li + li {
+  padding-top: 3.5rem;
+}
+
+.l_different__heading {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.l_different__cta {
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
+}
+
+.l_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l_footer__social-links {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,10 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <img src="#" alt="insure logo" />
+    <header class="l_header c_header l--center">
+      <img src="./images/logo.svg" alt="insure logo" />
       <nav>
-        <ul>
+        <div>
+          <img src="images/icon-hamburger.svg" alt="mobile toggle menu open" />
+          <img
+            class="hidden"
+            src="images/icon-close.svg"
+            alt="mobile toggle menu close"
+          />
+        </div>
+        <ul class="l_header__nav c_header__nav">
           <li><a href="#">How We Work</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Account</a></li>
@@ -19,16 +27,34 @@
         </ul>
       </nav>
     </header>
-    <section class="hero"></section>
-    <main>
+    <section class="hero">
+      <div>
+        <div>
+          <h1>Humanizing your insurance.</h1>
+          <p>
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that's right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <a href="#">View Plans</a>
+        </div>
+        <div>
+          <img
+            src="images/image-intro-desktop.jpg"
+            alt="young family holding hands"
+          />
+        </div>
+      </div>
+    </section>
+    <main class="l_different">
       <h2>We're Different</h2>
-      <ul>
+      <ul class="l_different__list">
         <li>
           <img
             src="./images/icon-snappy-process.svg"
             alt="lightning bolt icon"
           />
-          <h3>Snappy Process</h3>
+          <h3 class="l_different__heading">Snappy Process</h3>
           <p>
             Our application process can be completed in minutes, not hours.
             Don't get stuck filling in tedious forms.
@@ -39,7 +65,7 @@
             src="./images/icon-affordable-prices.svg"
             alt="dollar sign icon"
           />
-          <h3>Affordable Prices</h3>
+          <h3 class="l_different__heading">Affordable Prices</h3>
           <p>
             We don't want you worrying about high monthly costs. Our prices may
             be low, but we still offer the best coverage possible.
@@ -50,22 +76,24 @@
             src="./images/icon-people-first.svg"
             alt="person silhouette icon"
           />
-          <h3>People First</h3>
+          <h3 class="l_different__heading">People First</h3>
           <p>
             Our plans aren't full of conditions and clauses to prevent payouts.
             We make sure you're covered when you need it.
           </p>
         </li>
       </ul>
-      <div>
-        <h4>Find out more about how we work</h4>
-        <a href="#">How We Work</a>
+      <div class="l_different__cta">
+        <div>
+          <h4>Find out more about how we work</h4>
+          <a href="#">How We Work</a>
+        </div>
       </div>
     </main>
-    <footer>
+    <footer class="l_footer">
       <div>
         <img src="images/logo.svg" alt="insure logo" />
-        <ul>
+        <ul class="l_footer__social-links">
           <li><img src="./images/icon-facebook.svg" alt="facebook icon" /></li>
           <li><img src="./images/icon-twitter.svg" alt="twitter icon" /></li>
           <li>
@@ -73,6 +101,44 @@
           </li>
           <li>
             <img src="./images/icon-instagram.svg" alt="instagrapm logo" />
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="">
+          <li>
+            <h5>Our Company</h5>
+            <ul class="">
+              <li><a href="#">How We Work</a></li>
+              <li><a href="#">Why Insure?</a></li>
+              <li><a href="#">View Plans</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5>Help Me</h5>
+            <ul class="">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5>Contact</h5>
+            <ul class="">
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Live Chat</a></li>
+            </ul>
+          </li>
+          <li>
+            <h5>Others</h5>
+            <ul class="">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Licenses</a></li>
+            </ul>
           </li>
         </ul>
       </div>

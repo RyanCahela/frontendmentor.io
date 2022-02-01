@@ -1,3 +1,21 @@
+:root {
+  /**********************
+  Colors as colors
+***********************/
+  --black: 271 9% 17%;
+  --white: 0 100% 100%;
+  --gray: 271 5% 51%;
+  --dark-purple: 256 26% 20%;
+  --gray-blue: 215 30% 68%;
+
+  /**********************
+  Typography
+***********************/
+  --light-font-color: hsl(var(--white));
+  --dark-font-color: hsl(var(--black));
+  --icon-color: hsl(var(--gray-blue));
+}
+
 *,
 *::before,
 *::after {
@@ -8,14 +26,11 @@ body {
   margin: 0;
 }
 
-h1 {
-  color: tomato
-}
-
 img {
   max-width: 100%;
 }
 
 ul[class] {
   padding-left: 0;
+  list-style: none;
 }

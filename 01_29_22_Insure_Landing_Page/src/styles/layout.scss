@@ -1,0 +1,62 @@
+/**********************
+  Layout Utilites
+***********************/
+@mixin center {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/**********************
+  Component Layout
+***********************/
+
+.l_header {
+  @include center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l_header__nav {
+  display: none;
+}
+
+.l_different {
+  @include center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l_different__list li + li {
+  padding-top: 3.5rem;
+}
+
+.l_different__heading {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.l_different__cta {
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
+}
+
+.l_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.l_footer__social-links {
+  display: flex;
+}
