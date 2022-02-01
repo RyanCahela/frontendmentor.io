@@ -6,9 +6,16 @@
 
 body {
   margin: 0;
-  background-color: blue;
 }
 
 h1 {
   color: tomato
+}
+
+img {
+  max-width: 100%;
+}
+
+ul[class] {
+  padding-left: 0;
 }
