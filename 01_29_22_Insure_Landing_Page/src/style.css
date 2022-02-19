@@ -347,11 +347,16 @@ template {
   --dark-purple: 256 26% 20%;
   --gray-blue: 215 30% 68%;
   /**********************
-    Typography
+  Typography
   ***********************/
   --light-font-color: hsl(var(--white));
   --dark-font-color: hsl(var(--black));
   --icon-color: hsl(var(--gray-blue));
+  /**********************
+  default theme colors
+  ***********************/
+  --menu-bg-color: hsl(var(--black));
+  --menu-font-color: hsl(var(--white));
 }
 
 *,
@@ -373,9 +378,6 @@ ul[class] {
   list-style: none;
 }
 
-/**********************
-  Layout Utilites
-***********************/
 .hidden {
   display: none;
 }
@@ -383,7 +385,13 @@ ul[class] {
 /**********************
   Component Layout
 ***********************/
-.l_header {
+/**********************
+  Component Cosmetics
+***********************/
+/**********************
+  Component Index
+***********************/
+.header {
   max-width: 1110px;
   margin-left: auto;
   margin-right: auto;
@@ -392,10 +400,28 @@ ul[class] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
-.l_header__nav {
-  display: none;
+.header__nav {
+  color: var(--menu-font-color);
+  top: 20vh;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5 ease;
+  background-color: var(--menu-bg-color);
+}
+
+.header__nav--active {
+  color: var(--menu-font-color);
+  top: 20vh;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5 ease;
+  background-color: var(--menu-bg-color);
+  left: 0;
 }
 
 .l_different {

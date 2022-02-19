@@ -10,10 +10,16 @@
 
   /**********************
   Typography
-***********************/
+  ***********************/
   --light-font-color: hsl(var(--white));
   --dark-font-color: hsl(var(--black));
   --icon-color: hsl(var(--gray-blue));
+
+  /**********************
+  default theme colors
+  ***********************/
+  --menu-bg-color: hsl(var(--black));
+  --menu-font-color: hsl(var(--white));
 }
 
 *,

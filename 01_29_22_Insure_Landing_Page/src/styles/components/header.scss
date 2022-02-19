@@ -1,0 +1,47 @@
+@use "../mixins.scss";
+/**********************
+  Component Layout
+***********************/
+
+@mixin l_header {
+  @include mixins.center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+@mixin l_header__nav {
+  color: var(--menu-font-color);
+  top: 20vh;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5 ease;
+  background-color: var(--menu-bg-color);
+}
+
+@mixin l_header__nav--active {
+  @include l_header__nav;
+  left: 0;
+}
+
+/**********************
+  Component Cosmetics
+***********************/
+
+/**********************
+  Component Index
+***********************/
+
+.header {
+  @include l_header;
+}
+
+.header__nav {
+  @include l_header__nav;
+}
+
+.header__nav--active {
+  @include l_header__nav--active;
+}
