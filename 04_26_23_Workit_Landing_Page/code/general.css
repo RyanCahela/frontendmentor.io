@@ -1,0 +1,62 @@
+/* Resets */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 0;
+}
+
+img[class] {
+  width: 100%;
+}
+
+ul[class] {
+  padding-inline-start: 0;
+}
+/* utility */
+
+.body {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-body);
+  text-align: var(--text-align);
+}
+
+.button {
+  /* Theme colors */
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+
+  /* Layout */
+  padding-inline: 1.5em;
+  padding-block: 0.75em;
+}
+
+.title-l {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-heading--l);
+  font-weight: var(--fw-serif);
+  line-height: var(--lh-heading-l);
+}
+
+.title-m {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-heading--m);
+  font-weight: var(--fw-serif);
+  line-height: var(--lh-heading-m);
+}
+
+.title-s {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-heading--s);
+  font-weight: var(--fw-serif);
+  line-height: var(--lh-heading-s);
+}
+
+.mobile\:container {
+  @media screen and (max-width: 400px) {
+    padding-inline: 1rem;
+  }
+}

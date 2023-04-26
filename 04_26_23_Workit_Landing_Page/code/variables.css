@@ -1,0 +1,53 @@
+:root {
+  /* Color styles */
+  --dark--purple: hsla(273, 85.1%, 13.1%, 1);
+  --davys--grey: hsla(271, 12%, 34.3%, 1);
+  --eucaplyptus: hsla(150, 100%, 63.3%, 1);
+  --ghost--white: hsla(274, 100%, 98.6%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+
+  /* Text-size styles */
+  /* based on root font size of 16px */
+  --fs-heading--l: 3.125rem; /* 50px */
+  --fs-heading--m: 2rem; /* 32px */
+  --fs-heading--s: 1.75rem; /* 28px */
+  --lh-heading--l: 1;
+  --lh-heading--m: 1.5;
+  --lh-heading--s: 1.25;
+  --fs-body: 1.125rem;
+  --ff-serif: "Fraunces", serif;
+  --ff-sans-serif: "Manrope", sans-serif;
+  --fw-serif: 600;
+  --fw-sans-serif: 400;
+
+  /* Theme colors */
+  --primary-bg-color: var(--dark--purple);
+  --secondary-bg-color: var(--eucaplyptus);
+  --light-bg-color: var(--ghost--white);
+  --text-color-light: var(--white);
+  --text-color-dark-100: var(--dark--purple);
+  --text-color-dark-300: var(--davys--grey);
+
+  /* Component Theme Styles */
+  /* Button */
+  --button-bg-color: var(--secondary-bg-color);
+  --button-text-color: var(--text-color-dark-100);
+
+  /* Section Theme Styles */
+  /* Header Section Theme Styles */
+  --header-bg-color: var(--primary-bg-color);
+  --header-text-color: var(--text-color-light);
+
+  /* Hero Section Theme Styles */
+  --hero-bg-color: var(--primary-bg-color);
+  --hero-text-color: var(--text-color-light);
+
+  /* Feature Section Theme Styles */
+  --features-bg-color: var(--light-bg-color);
+  --features-heading-text-color: var(--text-color-dark-100);
+  --features-paragraph-text-color: var(--text-color-dark-300);
+
+  /* Early Access Signup Styles */
+  --early-access-bg-color: var(--primary-bg-color);
+  --early-access-text-color: var(--text-color-light);
+}

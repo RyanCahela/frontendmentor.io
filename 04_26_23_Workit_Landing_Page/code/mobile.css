@@ -1,0 +1,100 @@
+@media (min-width: 0) {
+  .mobile-variables {
+    --mobile-inline-padding: 20px;
+    --text-align: center;
+  }
+}
+
+/****************
+HEADER
+****************/
+@media (min-width: 0) {
+  .header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    display: flex;
+    padding-inline: var(--mobile-inline-padding);
+  }
+}
+
+/****************
+  HERO
+  ****************/
+@media (min-width: 0) {
+  .hero {
+    background-color: var(--hero-bg-color);
+    color: var(--hero-text-color);
+    padding-inline: var(--mobile-inline-padding);
+    padding-block: 64px;
+  }
+
+  .hero__heading {
+    font-family: var(--ff-serif);
+    font-size: var(--fs-heading--l);
+    font-weight: var(--fw-serif);
+    line-height: var(--lh-heading--l);
+  }
+}
+
+/****************
+  FEATURES
+  ****************/
+@media (min-width: 0) {
+  .features {
+    background-color: var(--features-bg-color);
+    color: var(--features-paragraph-text-color);
+    padding-inline: var(--mobile-inline-padding);
+  }
+
+  .features__heading {
+    color: var(--features-heading-text-color);
+    font-family: var(--ff-serif);
+    font-size: var(--fs-heading--s);
+    font-weight: var(--fw-serif);
+    line-height: var(--lh-heading--s);
+  }
+
+  .features__list {
+    list-style: none;
+  }
+}
+
+/****************
+  EARLY ACCESS SIGNUP
+  ****************/
+@media (min-width: 0) {
+  .early-access-signup {
+    color: var(--early-access-text-color);
+    background-color: var(--early-access-bg-color);
+    padding-inline: var(--mobile-inline-padding);
+  }
+
+  .early-access-signup__heading {
+    font-family: var(--ff-serif);
+    font-size: var(--fs-heading--m);
+    font-weight: var(--fw-serif);
+    line-height: var(--lh-heading--m);
+  }
+}
+
+/****************
+  FOOTER
+  ****************/
+@media (min-width: 0) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 4.625rem;
+    padding-block-end: 4rem;
+    gap: 3.5rem;
+    padding-inline: var(--mobile-inline-padding);
+  }
+
+  .footer__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.75em;
+  }
+}
