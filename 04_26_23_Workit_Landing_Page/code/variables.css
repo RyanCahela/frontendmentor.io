@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Fraunces144";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
+      format("truetype"),
+    url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFTWONKopszwght.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+      format("truetype"),
+    url("./assets/fonts/manrope/Manrope-VariableFont_wght.woff") format("woff");
+}
+
 :root {
   /* Color styles */
   --dark--purple: hsla(273, 85.1%, 13.1%, 1);
@@ -15,12 +30,14 @@
   --lh-heading--m: 1.5;
   --lh-heading--s: 1.25;
   --fs-body: 1.125rem;
-  --ff-serif: "Fraunces", serif;
+  --ff-serif: "Fraunces144", serif;
   --ff-sans-serif: "Manrope", sans-serif;
   --fw-serif: 600;
   --fw-sans-serif: 400;
 
   /* Theme colors */
+  --priamry-color: var(--dark-purple);
+  --secondary-color: var(--eucaplyptus);
   --primary-bg-color: var(--dark--purple);
   --secondary-bg-color: var(--eucaplyptus);
   --light-bg-color: var(--ghost--white);
